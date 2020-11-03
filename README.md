@@ -1,6 +1,6 @@
 # jwks-cr
 
-Utility for retrieving signing keys from a JWKS endpoint.
+Utility for retrieving signing keys from a JWKS endpoint. Primarily a port of [node-jwks-rsa](https://github.com/auth0/node-jwks-rsa).
 
 ## Installation
 
