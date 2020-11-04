@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/aarongodin/jwks-cr.svg?branch=master)](https://travis-ci.org/aarongodin/jwks-cr)
+![GitHub last commit](https://img.shields.io/github/last-commit/aarongodin/jwks-cr?style=flat-square)
+
 # jwks-cr
 
 Utility for retrieving signing keys from a JWKS endpoint. Primarily a port of [node-jwks-rsa](https://github.com/auth0/node-jwks-rsa).

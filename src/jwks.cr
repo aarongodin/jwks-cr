@@ -27,13 +27,12 @@ module JWKS
   def self.get_key(url, kid) : Key
     response = HTTP::Client.get url
     parsed = EndpointResponse.from_json response.body
-    key = parsed.keys.find{ |key| key.kid == kid }
+    key = parsed.keys.find { |key| key.kid == kid }
 
     if key.nil?
-      raise KeyNotFoundException.new 
+      raise KeyNotFoundException.new
     end
 
     Key.from_response key.as(KeyResponse)
   end
 end
-

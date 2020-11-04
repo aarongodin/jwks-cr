@@ -30,8 +30,8 @@ module JWKS
       modulus = prepad_signed(Base64.decode(modulus_enc).hexstring)
       exponent = prepad_signed(Base64.decode(exponent_enc).hexstring)
 
-      sizes = { modulus.size / 2, exponent.size / 2 }
-      enc_sizes = sizes.map{ |s| encode_size_hex(s) }
+      sizes = {modulus.size / 2, exponent.size / 2}
+      enc_sizes = sizes.map { |s| encode_size_hex(s) }
       enc_keysize = encode_size_hex(2 + sizes[0] + sizes[1] + enc_sizes[0].size / 2 + enc_sizes[1].size / 2)
 
       public_key_hex = %|30#{enc_keysize}02#{enc_sizes[0]}#{modulus}02#{enc_sizes[1]}#{exponent}|
